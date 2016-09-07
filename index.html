@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>fun2</title>
+  </head>
+  <body>
+    <h1>boot</h1>
+    <script type="text/javascript">
+      // var person = {
+      //   name : "Jeff",
+      //   distance_traveled : 0 || 0,
+      //   say_name : alert(this.name),
+      //   walk: this.distance_traveled =  3,
+      //   run: this.distance_traveled =  10,
+      //   crawl: this.distance_traveled = 1
+      //   }
+      // // var say_name = person.name;
+      //
+      // console.log(person.name);
+      // console.log(person.walk, person.distance_traveled)
+      // console.log(person.run, person.run, person.distance_traveled)
+
+      function personthing(name, something){
+        this.personname = name;
+        this.distance_traveled = 0;
+        // this.say_name = alert(this.personname);
+        this.say_something = this.personname + " says " + something
+        this.walk = this.distance_traveled +=  3;
+        this.run = this.distance_traveled +=  10;
+        this.crawl = this.distance_traveled += 1;
+      }
+      var Jeff = new personthing("Jorp!", "Barf");
+      var Jessie = new personthing("Jessers!", "I am awesome.")
+      var Josh = new personthing("Joshers!", "I am a funny man.")
+      // console.log(Jeff.personname, Jeff.say_something)
+      // console.log(Jessie.personname, Jessie.say_something)
+      // console.log(Josh.personname, Josh.say_something)
+      console.log("**************************")
+
+      function goNinja(name, cohort){
+        this.name = name;
+        this.cohort = cohort;
+        this.beltLevel = "yellow belt";
+        this.changebelt = function (belt){
+          this.beltLevel = belt;
+        }
+      }
+      var ninjaJeff = new goNinja("Jeffs", "June2016")
+      ninjaJeff.changebelt("blackbelt");
+      console.log(ninjaJeff.name, ninjaJeff.cohort, ninjaJeff.beltLevel)
+    </script>
+  </body>
+</html>
